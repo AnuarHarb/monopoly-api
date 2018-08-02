@@ -14,7 +14,8 @@ app.use(bodyParser.json());
 
 const services = require('./services');
 
-app.get('/', services.getPlayers);
+app.get('/players', services.getPlayers);
+app.post('/players', services.newPlayer);
 
 app
   .listen(PORT, () => console.log(`Ready to play Monopoly in PORT ${ PORT } !!`));
