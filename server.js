@@ -1,7 +1,20 @@
-var express = require('express'),
-  app = express(),
-  port = process.env.PORT || 3000;
+'use strict'
 
-app.listen(port);
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+require('dotenv').load();
 
-console.log('todo list RESTful API server started on: ' + port);
+const PORT = process.env.PORT || 5000;
+
+const app = express();
+app.use(cors());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
+const services = require('./services');
+
+app.get('/', services.getPlayers);
+
+app
+  .listen(PORT, () => console.log(`Ready to play Monopoly in PORT ${ PORT } !!`));
