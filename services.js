@@ -2,7 +2,7 @@
 
 const fs = require('fs'); //file sistem
 
-const getPlayer = (request, response) => {
+const getPlayers = (request, response) => {
   let players = [];
   try {
     const file = fs.readFileSync('data/db.json');
@@ -13,3 +13,5 @@ const getPlayer = (request, response) => {
     response.status(500).send('Error, mueres');
   }
 }
+
+module.exports = {getPlayers};
