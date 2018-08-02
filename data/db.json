@@ -10,7 +10,7 @@
         "status": "playing",
         "money": 500000,
         "properties": [
-
+          1,3,5,6,8,9,11,12,13,14,15,16,18,19
         ]
       }
     ]
@@ -467,17 +467,29 @@
     "fortune": [
       {
         "id": 0,
-        "description":"",
-        "action":"",
-        "actionValue": ""
+        "description":"Paga $150 para tener limpias y pulidas las 32 cápsulas del London EYE",
+        "action":"pay money",
+        "actionValue": 150
+      },
+      {
+        "id": 1,
+        "description":"Recbe un beneficio de $500 por tu tienda de bicicletas en Pekin, China",
+        "action":"add money",
+        "actionValue": 500
       }
     ],
     "arc": [
       {
         "id": 0,
-        "description":"",
-        "action":"",
-        "actionValue": ""
+        "description":"Gasta $500 en el mercado de navidad de Miunich",
+        "action":"pay money",
+        "actionValue": 500
+      },
+      {
+        "id": 1,
+        "description":"Recibes una devolución de impuestos de $500",
+        "action":"add money",
+        "actionValue": 500
       }
     ]
   }
